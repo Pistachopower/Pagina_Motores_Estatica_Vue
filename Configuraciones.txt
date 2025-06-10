@@ -1,0 +1,16 @@
+Descargar el repositorio
+
+Aplicar este comando en la carpeta del proyecto: 
+npm install
+
+npm install vue-router pinia
+
+En la página principal, ve a main.js y coloca esto al principio:
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+
+Debes ir a /ruta/de/tu/Pagina_Motores_Estatica_Vue
+
+Arrancar proyecto: npm run dev
+
