@@ -5,9 +5,17 @@ npm install
 
 npm install vue-router pinia
 
-En la página principal, ve a main.js y coloca esto al principio:
+Ve a cd  /Pagina_Motores_Estatica_Vue/Pagina_Motores_Estatica_Vue
+npm install bootstrap @popperjs/core
+npm install bootstrap-icons
+
+Bootstrap: En la página principal, ve a main.js y coloca esto al principio:
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+Bootstrap icons: 
+Agrega esta línea en tu archivo main.js:
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 Debes ir a /ruta/de/tu/Pagina_Motores_Estatica_Vue
