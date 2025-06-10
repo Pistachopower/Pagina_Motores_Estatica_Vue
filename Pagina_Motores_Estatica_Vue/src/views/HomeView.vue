@@ -1,11 +1,9 @@
 <script setup>
-import Header from '@/components/Header.vue';
-
 
 </script>
 
 <template>
   <main>
-    <Header></Header>
+    <h1>HOLA DESDE EN MAIN</h1>
   </main>
 </template>

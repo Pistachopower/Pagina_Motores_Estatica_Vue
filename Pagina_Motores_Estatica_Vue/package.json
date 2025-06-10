@@ -10,6 +10,9 @@
     "test:unit": "vitest"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.6",
+    "bootstrap-icons": "^1.13.1",
     "pinia": "^3.0.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
