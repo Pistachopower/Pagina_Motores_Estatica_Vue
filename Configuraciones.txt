@@ -1,16 +1,125 @@
 Descargar el repositorio
 
+Vue3
+
 Aplicar este comando en la carpeta del proyecto: 
 npm install
 
 npm install vue-router pinia
+npm install vue3-carousel
 
 En la página principal, ve a main.js y coloca esto al principio:
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 
+
 Debes ir a /ruta/de/tu/Pagina_Motores_Estatica_Vue
 
 Arrancar proyecto: npm run dev
+
+Instalar Email js
+
+
+Ideas
+https://marea.pro/motorpartsexpress
+https://www.autodoc.es/
+https://www.endado.com
+
+
+
+
+
+
+
+
+*************************************************************
+<script setup>
+import { Carousel, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
+
+// Importamos las imagenes como módulo
+import carousel1 from '@/assets/img/Carousel_1.jpg'
+import carousel2 from '@/assets/img/Carousel_2.jpg'
+
+</script>
+
+<template>
+    <Carousel
+    :settings="{
+      autoplay: true,
+      autoplayTimeout: 10000,
+      wrapAround: true,
+      autoplayDirection: 'forward'
+    }"
+  >
+    <Slide>
+      <img class="d-block w-100" :src="carousel1" alt="First slide" />
+    </Slide>
+    <Slide>
+      <img class="d-block w-100" :src="carousel2" alt="First slide" />
+    </Slide>
+    <Slide>
+      <img class="d-block w-100" :src="carousel1" alt="First slide" />
+    </Slide>
+  </Carousel>
+</template>
+
+<style scoped></style>
+
+
+
+
+Catalogo
+<script setup>
+import motor from '@/assets/img/Motor.png'
+import transmision from '@/assets/img/Transmision.png'
+
+
+const categorias = [
+  { nombre: "Motores", img: motor },
+  { nombre: "Transmisiones", img: transmision },
+]
+</script>
+
+<template>
+  <div class="container py-5">
+    <h2 class="text-center mb-4">ENCUENTRA RECAMBIOS COCHE EN NUESTRO CATÁLOGO</h2>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4">
+      <div class="col" v-for="(categoria, index) in categorias" :key="index">
+        <div class="categoria h-100">
+          <img :src="categoria.img" :alt="categoria.nombre" />
+          <div class="punto-naranja"></div>
+          <h6>{{ categoria.nombre }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.categoria {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.categoria:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.categoria img {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.punto-naranja {
+  width: 6px;
+  height: 6px;
+  background-color: rgb(221, 42, 11);
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+</style>
 
