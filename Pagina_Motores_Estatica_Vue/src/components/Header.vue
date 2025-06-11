@@ -1,5 +1,5 @@
 <script setup>
-
+import logo from '@/assets/img/Logo.png'
 </script>
 
 <template>
@@ -7,7 +7,7 @@
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
-        <i class="bi-tools fs-3 text-white"></i>
+        <img :src="logo" alt="Logo" style="height: 40px;" />
         <span>MotorPartsExpress</span>
       </a>
 
@@ -24,10 +24,10 @@
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/">Productos</router-link>
+            <router-link class="nav-link" to="/productos">Productos</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/">Sobre nosotros</router-link>
+            <router-link class="nav-link" to="/about">Sobre nosotros</router-link>
           </li>
         </ul>
       </div>

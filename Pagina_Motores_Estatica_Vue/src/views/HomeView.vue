@@ -1,5 +1,8 @@
 <script setup>
 import Carousel from '@/components/Carousel.vue'
+import ProductosMasVendidos from '@/components/ProductosMasVendidos.vue'
+import Catalogo from '@/components/Catalogo.vue'
+import Contacto from '@/components/Contacto.vue';
 
 
 </script>
@@ -7,20 +10,20 @@ import Carousel from '@/components/Carousel.vue'
 <template>
   <main class="home-main">
     <section class="home-section home-carousel">
-      <!-- Aquí irá el componente Carousel -->
-      <Carousel></Carousel>
+     <Carousel></Carousel>
+      
     </section>
     
     
     <section class="home-section home-products">
       <!-- Aquí irá el componente Productos más vendidos -->
-      <h2>Productos más vendidos</h2>
+      <Catalogo></Catalogo>
     </section>
     
     
     <section class="home-section home-contact">
       <!-- Aquí irá el componente Formulario de contacto -->
-      <h2>Formulario de contacto</h2>
+      <Contacto></Contacto>
     </section>
   </main>
 </template>
