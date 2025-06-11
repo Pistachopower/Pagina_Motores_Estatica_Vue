@@ -1,13 +1,13 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { productos } from '@/data/productos.js'
+import { motores } from '@/data/productos.js'
 
 const busqueda = ref('')
 
 const productosFiltrados = computed(() => {
   const texto = busqueda.value.toLowerCase()
-  return productos.filter((p) =>
-    p.nombre.toLowerCase().includes(texto)
+  return motores.filter((p) =>
+    p.motor.toLowerCase().includes(texto)
   )
 })
 </script>
@@ -44,7 +44,7 @@ const productosFiltrados = computed(() => {
               style="object-fit: cover; height: 200px;"
             />
             <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
-              <h5 class="card-title">{{ producto.nombre }}</h5>
+              <h5 class="card-title">{{ producto.motor }}</h5>
               <p class="card-text">{{ producto.descripcion }}</p>
             </div>
           </div>
