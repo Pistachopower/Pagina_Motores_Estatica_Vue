@@ -44,7 +44,5 @@ const closeMenu = () => {
     </div>
   </nav>
 </template>
-
-
 <style>
 </style>
