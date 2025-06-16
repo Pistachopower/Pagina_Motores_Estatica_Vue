@@ -3,16 +3,27 @@ import { ref } from 'vue'
 import emailjs from '@emailjs/browser'
 import { Toast } from 'bootstrap'
 
+const serviceId = import.meta.env.VITE_SERVICE_ID
+const templateId = import.meta.env.VITE_TEMPLATE_ID
+const publicKey = import.meta.env.VITE_PUBLIC_KEY 
+
 const form = ref(null)
 const status = ref('')
 const successToast = ref(null)
 
 const sendEmail = () => {
+  console.log(serviceId)
+  console.log(templateId)
+  console.log(publicKey)
+
+  
+
+
   emailjs.sendForm(
-    'service_xb5et6c',      // Reemplaza con tu Service ID
-    'template_cf09cls',     // Reemplaza con tu Template ID
+    serviceId,      // Reemplaza con tu Service ID
+    templateId,     // Reemplaza con tu Template ID
     form.value,
-    { publicKey: 'AHVXW5-qXv2dlz4gY' }
+    { publicKey: publicKey }
   )
   .then(() => {
     status.value = '¡Mensaje enviado correctamente!'
