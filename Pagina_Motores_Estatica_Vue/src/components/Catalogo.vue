@@ -1,10 +1,14 @@
 <script setup>
 import motor from '@/assets/img/Motor.png'
 import transmision from '@/assets/img/Transmision.png'
+import cajaCambio from '@/assets/img/cajaCambio.png'
+import airbag from '@/assets/img/airbag.jpg'
 
 const categorias = [
   { nombre: "Motores", img: motor },
   { nombre: "Transmisiones", img: transmision },
+  { nombre: "Caja de cambios", img: cajaCambio },
+  { nombre: "Kit de airbag", img: airbag },
 ]
 </script>
 
