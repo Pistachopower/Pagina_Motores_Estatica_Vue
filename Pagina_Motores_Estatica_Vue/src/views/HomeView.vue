@@ -5,6 +5,7 @@ import Catalogo from '@/components/Catalogo.vue'
 import Contacto from '@/components/Contacto.vue';
 
 
+
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import Contacto from '@/components/Contacto.vue';
     <section class="home-section home-contact">
       <!-- Aquí irá el componente Formulario de contacto -->
       <Contacto></Contacto>
+
     </section>
   </main>
 </template>

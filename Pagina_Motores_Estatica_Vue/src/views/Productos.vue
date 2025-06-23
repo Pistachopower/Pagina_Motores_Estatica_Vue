@@ -9,9 +9,9 @@ const todosLosProductos = [
   ...Motores.map(p => ({ ...p, tipo: 'motor' })),
   ...CajasCambio.map(p => ({ ...p, tipo: 'caja' })),
   ...Airbags.map(p => ({ ...p, tipo: 'airbag' })),
-]
+];
 
-console.log(todosLosProductos)
+//console.log(todosLosProductos)
 
 //devuelve solo los que coinciden con la búsqueda
 const productosFiltrados = computed(() => {
@@ -53,12 +53,18 @@ const productosFiltrados = computed(() => {
           :key="producto.tipo + '-' + producto.id" 
         >
           <div class="card h-100 shadow-sm">
-            <img
-              :src="producto.imagen"
-              class="card-img-top"
-              :alt="producto.motor || producto.cajaCambios || producto.airbag"
-              style="object-fit: cover; height: 200px;"
-            />
+          
+            <!--Enlace-->
+        <router-link :to="`/product/${producto.tipo}/${producto.id}`">
+          <img
+            :src="producto.imagenes ? producto.imagenes[0] : ''"
+            class="card-img-top"
+            :alt="producto.motor || producto.cajaCambios || producto.airbag"
+            style="object-fit: cover; height: 200px;"
+          />
+        </router-link>
+
+
             <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
               <h5 class="card-title">
                 {{ producto.motor || producto.cajaCambios || producto.airbag }}
