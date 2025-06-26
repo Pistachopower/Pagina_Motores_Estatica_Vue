@@ -21,10 +21,10 @@ function cerrar() {
           <button type="button" class="btn-close" @click="cerrar"></button>
         </div>
         <div class="modal-body text-center">
-          <router-link to="/about#preguntas-frecuentes">
+          <router-link to="/about#preguntas-frecuentes" class="btn-rojo">
             Preguntas Frecuentes
           </router-link>
-          <router-link to="/#formulario-contacto" class="btn btn-outline-success w-100">
+          <router-link to="/#formulario-contacto" class="btn-rojo">
             <i class="bi bi-envelope me-2"></i> Formulario de Contacto
           </router-link>
         </div>
@@ -35,6 +35,23 @@ function cerrar() {
 
 <style scoped>
 .modal.fade {
-  background: rgba(0,0,0,0.3);
+  background: rgba(247, 245, 245, 0.705);
+}
+
+.btn-rojo {
+  display: inline-block;
+  background-color: #ec192e;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.btn-rojo:hover {
+  background-color: #ec192e;
 }
 </style>
