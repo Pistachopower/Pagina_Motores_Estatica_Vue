@@ -42,7 +42,7 @@ import AudiAirbag5 from '@/assets/img/KitsAirbag/Audi_Airbag/Audi_Airbag5.avif'
 
 import Audi_Q3 from '@/assets/img/KitsAirbag/Audi_Q3/Audi_Q3_1.avif'
 
-import AudiA1_2021 from '@/assets/img/KitsAirbag/AudiA1_2021/AudiA1_2021_1.avif'
+import AudiA1_2021_1 from '@/assets/img/KitsAirbag/AudiA1_2021/AudiA1_2021_1.avif'
 
 import BMW_Airbag from '@/assets/img/KitsAirbag/BMW_Airbag/BMW_Airbag.avif'
 
@@ -214,7 +214,7 @@ export const Airbags = [
     descripcion: "Incluye cinturones pretensados, reacondicionado con garantía.",
     modelo: "Audi A1 (2021)",
     precio: 650,
-    imagen: [AudiA1_2021]
+    imagenes: [AudiA1_2021_1]
   },
   {
     id: 10,
