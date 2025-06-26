@@ -52,6 +52,7 @@ export const Motores = [
   {
     id: 1,
     motor: "Renault K9KA410",
+    tipo: "motor",
     descripcion: "Revisado, listo para instalar con garantía profesional.",
     cilindrada: "1.5 L",
     tipoCombustible: "Diésel",
@@ -70,6 +71,7 @@ export const Motores = [
   {
     id: 2,
     motor: "FIAT 199 2000",
+    tipo: "motor",
     descripcion: "Revisado, con garantía. Motor Multijet.",
     cilindrada: "2.0 L",
     tipoCombustible: "Diésel",
@@ -88,6 +90,7 @@ export const Motores = [
   {
     id: 3,
     motor: "Ford 2.2",
+    tipo: "motor",
     descripcion: "Motor TDCi, listo para uso profesional.",
     cilindrada: "2.2 L",
     tipoCombustible: "Diésel",
@@ -104,6 +107,7 @@ export const Motores = [
   {
     id: 4,
     motor: "Miyamoto",
+    tipo: "motor",
     descripcion: "Motor japonés para uso industrial o agrícola.",
     cilindrada: "Desconocida",
     tipoCombustible: "Desconocido",
@@ -121,6 +125,7 @@ export const Motores = [
   {
     id: 5,
     motor: "Toyota 1KR-FE",
+    tipo: "motor",
     descripcion: "Motor de 78.000 km, distribución por cadena.",
     cilindrada: "1.0 L",
     tipoCombustible: "Gasolina",
@@ -141,6 +146,7 @@ export const Motores = [
   {
     id: 6,
     motor: "Nissan Terrano 2.7 TDI",
+    tipo: "motor",
     descripcion: "Incluye bomba, turbo e inyectores. Garantía.",
     cilindrada: "2.7 L",
     tipoCombustible: "Diésel",
@@ -162,6 +168,7 @@ export const CajasCambio = [
   {
     id: 7,
     cajaCambios: "Toyota (6 velocidades)",
+    tipo: "cajaCambios",
     descripcion: "Caja revisada y lista para instalar.",
     referencia: "6MT-TY-01",
     tipoTransmision: "Manual",
@@ -186,6 +193,7 @@ export const CajasCambio = [
   {
     id: 8,
     cajaCambios: "JR5 391",
+    tipo: "cajaCambios",
     descripcion: "Caja manual para Renault/Dacia.",
     referencia: "JR5391",
     tipoTransmision: "Manual",
@@ -211,6 +219,7 @@ export const Airbags = [
   {
     id: 9,
     airbag: "Airbag Audi A1 2021",
+    tipo: "airbag",
     descripcion: "Incluye cinturones pretensados, reacondicionado con garantía.",
     modelo: "Audi A1 (2021)",
     precio: 650,
@@ -219,6 +228,7 @@ export const Airbags = [
   {
     id: 10,
     airbag: "Kit Airbag Genérico Reacondicionado",
+    tipo: "airbag",
     descripcion: "Sistema de seguridad OEM reacondicionado listo para instalar.",
     modelo: "Multimarca",
     precio: 500,
@@ -227,6 +237,7 @@ export const Airbags = [
   {
     id: 11,
     airbag: "Kit Airbag Audi",
+    tipo: "airbag",
     descripcion: "Airbags + cinturones, reacondicionados con garantía.",
     modelo: "Audi A3/A4",
     precio: 700,
@@ -241,6 +252,7 @@ export const Airbags = [
   {
     id: 12,
     airbag: "Kit Airbag BMW",
+    tipo: "airbag",
     descripcion: "Airbags + cinturones, reacondicionados.",
     modelo: "BMW Serie 1/3",
     precio: 750,

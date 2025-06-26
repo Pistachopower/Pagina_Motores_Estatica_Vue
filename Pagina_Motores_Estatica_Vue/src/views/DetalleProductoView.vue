@@ -1,20 +1,37 @@
 <script setup>
-import ProductosRelacionados from '@/components/ProductosRelacionados.vue';
+import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { Motores, CajasCambio, Airbags } from '@/data/productos.js'
+import ProductosRelacionados from '@/components/ProductosRelacionados.vue'
 
 const route = useRoute()
-const tipo = route.params.tipo
-const id = parseInt(route.params.id)
+const tipo = ref(route.params.tipo)
+const id = ref(parseInt(route.params.id))
 
-let producto = null
-if (tipo === 'motor') {
-  producto = Motores.find(p => p.id === id)
-} else if (tipo === 'caja') {
-  producto = CajasCambio.find(p => p.id === id)
-} else if (tipo === 'airbag') {
-  producto = Airbags.find(p => p.id === id)
+const producto = ref(null)
+
+function buscarProducto() {
+  if (tipo.value === 'motor') {
+    producto.value = Motores.find(p => p.id === id.value)
+  } else if (tipo.value === 'caja' || tipo.value === 'cajaCambios') {
+    producto.value = CajasCambio.find(p => p.id === id.value)
+  } else if (tipo.value === 'airbag') {
+    producto.value = Airbags.find(p => p.id === id.value)
+  }
 }
+
+// Inicial
+buscarProducto()
+
+// Observa cambios en la ruta
+watch(
+  () => [route.params.tipo, route.params.id],
+  ([nuevoTipo, nuevoId]) => {
+    tipo.value = nuevoTipo
+    id.value = parseInt(nuevoId)
+    buscarProducto()
+  }
+)
 </script>
 
 <template>
@@ -23,7 +40,7 @@ if (tipo === 'motor') {
   <section class="mb-5" v-if="producto">
      <div class="container py-5" v-if="producto">
         <div class="row g-5">
-          
+
           <!-- COLUMNA IZQUIERDA: Carrusel de imágenes -->
           <div class="col-md-6">
             <div class="bg-white rounded shadow-sm p-3 border">
@@ -95,8 +112,7 @@ if (tipo === 'motor') {
 
   <!-- SECCIÓN 2: Productos relacionados -->
   <section class="bg-light rounded p-4 mb-5">
-  <h3 class="fw-bold mb-4 text-center">Productos relacionados</h3>
-  <div class="text-center text-muted">Aquí irán los productos relacionados</div>
+  <ProductosRelacionados :tipo="tipo" :idActual="id" />
   </section>
 
   <!-- SECCIÓN 3: Opiniones -->
