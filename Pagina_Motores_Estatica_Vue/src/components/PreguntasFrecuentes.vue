@@ -28,7 +28,7 @@ const preguntas = [
 </script>
 
 <template>
-  <section class="container py-5">
+  <section id="preguntas-frecuentes" class="container py-5">
     <h2 class="mb-4 text-center">Preguntas Frecuentes</h2>
     <div class="row justify-content-center">
       <div class="col-12 col-sm-10 col-md-10 col-lg-8">

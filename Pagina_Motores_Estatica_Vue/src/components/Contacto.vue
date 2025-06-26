@@ -55,7 +55,7 @@ const sendEmail = () => {
       <!-- Columna derecha: formulario -->
       <div class="col-lg-7">
         <h3 class="fw-bold mb-4">Escríbenos</h3>
-        <form ref="form" @submit.prevent="sendEmail">
+        <form ref="form" @submit.prevent="sendEmail" id="formulario-contacto">
           <div class="row g-3">
             <div class="col-md-6 position-relative">
               <i class="bi bi-person"></i>

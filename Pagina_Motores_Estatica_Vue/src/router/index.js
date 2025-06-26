@@ -31,8 +31,13 @@ const router = createRouter({
   },
 
   ],
-    scrollBehavior(to, from, savedPosition) {
-    // Siempre hacer scroll al tope al navegar a una nueva ruta
+   scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
     return { top: 0 }
   }
 })
