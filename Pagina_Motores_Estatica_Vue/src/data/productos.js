@@ -65,8 +65,22 @@ export const Motores = [
           RenaultK9KA410_1,
           RenaultK9KA410_2,
           RenaultK9KA410_3
-    ]
-      
+    ],
+
+    comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ]      
   },
   {
     id: 2,
@@ -84,7 +98,21 @@ export const Motores = [
         MotorFiat1,
         MotorFiat2,
         MotorFiat3
-    ]
+    ],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 1,
+        fecha: "2023-10-01"
+      }
+    ]  
       
   },
   {
@@ -102,7 +130,21 @@ export const Motores = [
     imagenes: [
       MotorFord1,
       MotorFord2,
-    ] 
+    ],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ]  
   },
   {
     id: 4,
@@ -119,7 +161,21 @@ export const Motores = [
     imagenes: [
       MotorMiyamoto1,
       MotorMiyamoto2
-    ]
+    ],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ]  
       
   },
   {
@@ -141,7 +197,21 @@ export const Motores = [
       MotorToyota1KR1_4,
       MotorToyota1KR1_5,
       MotorToyota1KR1_6
-    ]
+    ],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ]  
   },
   {
     id: 6,
@@ -159,7 +229,21 @@ export const Motores = [
       MotorNissanTerrano1,
       MotorNissanTerrano2,
       MotorNissanTerrano3
-    ]
+    ],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ]  
   }
 ];
 
@@ -187,8 +271,21 @@ export const CajasCambio = [
       CajaCambioToyotaCorolla,
       CajaCambioToyotaCorolla2
 
-    ]
-    
+    ],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ]  
   },
   {
     id: 8,
@@ -210,7 +307,21 @@ export const CajasCambio = [
     imagenes: [
       CajaCambioRenaultJR5,
       CajaCambioRenaultJR52
-    ]
+    ],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ]  
   }
 ];
 
@@ -223,7 +334,21 @@ export const Airbags = [
     descripcion: "Incluye cinturones pretensados, reacondicionado con garantía.",
     modelo: "Audi A1 (2021)",
     precio: 650,
-    imagenes: [AudiA1_2021_1]
+    imagenes: [AudiA1_2021_1],
+    comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ] 
   },
   {
     id: 10,
@@ -232,7 +357,21 @@ export const Airbags = [
     descripcion: "Sistema de seguridad OEM reacondicionado listo para instalar.",
     modelo: "Multimarca",
     precio: 500,
-    imagenes: [Audi_Q3]
+    imagenes: [Audi_Q3],
+    comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5,
+        fecha: "2023-09-15"
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4,
+        fecha: "2023-10-01"
+      }
+    ] 
   },
   {
     id: 11,
@@ -247,7 +386,19 @@ export const Airbags = [
       AudiAirbag3,
       AudiAirbag4,
       AudiAirbag5
-    ]
+    ],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4
+      }
+    ]  
   },
   {
     id: 12,
@@ -256,7 +407,19 @@ export const Airbags = [
     descripcion: "Airbags + cinturones, reacondicionados.",
     modelo: "BMW Serie 1/3",
     precio: 750,
-    imagenes: [BMW_Airbag]
+    imagenes: [BMW_Airbag],
+        comentarios: [
+      {
+        usuario: "Juan",
+        texto: "Muy buen motor, llegó rápido.",
+        estrellas: 5
+      },
+      {
+        usuario: "Ana",
+        texto: "Funcionando perfectamente.",
+        estrellas: 4
+      }
+    ]  
   }
 ];
 

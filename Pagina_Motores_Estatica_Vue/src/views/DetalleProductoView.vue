@@ -3,6 +3,7 @@ import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { Motores, CajasCambio, Airbags } from '@/data/productos.js'
 import ProductosRelacionados from '@/components/ProductosRelacionados.vue'
+import Opiniones from '@/components/Opiniones.vue'
 
 const route = useRoute()
 const tipo = ref(route.params.tipo)
@@ -32,6 +33,9 @@ watch(
     buscarProducto()
   }
 )
+
+console.log('comentario seleccionado:', producto.value.comentarios)
+
 </script>
 
 <template>
@@ -106,15 +110,14 @@ watch(
   <!-- Si no hay producto -->
   <div v-else class="alert alert-danger">Producto no encontrado.</div>
 
-  <!-- SECCIÓN 2: Productos relacionados -->
+<!-- SECCIÓN 2: Opiniones -->
   <section class="bg-light rounded p-4 mb-5">
-  <ProductosRelacionados :tipo="tipo" :idActual="id" />
+    <Opiniones :opiniones="producto.comentarios" />
   </section>
 
-  <!-- SECCIÓN 3: Opiniones -->
+  <!-- SECCIÓN 3: Productos relacionados -->
   <section class="bg-light rounded p-4">
-  <h3 class="fw-bold mb-4 text-center">Opiniones</h3>
-  <div class="text-center text-muted">Aquí irán las opiniones de clientes</div>
+    <ProductosRelacionados :tipo="tipo" :idActual="id" />
   </section>
 </div>
 
