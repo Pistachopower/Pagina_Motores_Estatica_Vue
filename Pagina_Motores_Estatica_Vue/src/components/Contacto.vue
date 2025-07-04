@@ -12,12 +12,6 @@ const status = ref('')
 const successToast = ref(null)
 
 const sendEmail = () => {
-  console.log(serviceId)
-  console.log(templateId)
-  console.log(publicKey)
-
-  
-
 
   emailjs.sendForm(
     serviceId,      // Reemplaza con tu Service ID

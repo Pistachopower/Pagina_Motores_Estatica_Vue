@@ -46,6 +46,7 @@ watch(
             <div class="bg-white rounded shadow-sm p-3 border">
               <div
                 v-if="producto.imagenes && producto.imagenes.length > 0"
+                :key="producto.id"
                 id="carouselProducto"
                 class="carousel slide"
                 data-bs-ride="carousel"
@@ -99,11 +100,6 @@ watch(
             </div>
           </div>
         </div>
-      </div>
-    
-      <!-- Producto no encontrado -->
-      <div v-else class="container py-4">
-        <div class="alert alert-danger">Producto no encontrado.</div>
       </div>
   </section>
 

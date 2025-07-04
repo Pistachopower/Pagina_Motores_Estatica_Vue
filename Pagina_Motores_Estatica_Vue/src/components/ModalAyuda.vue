@@ -1,5 +1,8 @@
 <script setup>
-const mostrar = defineModel('mostrar', { type: Boolean, required: true })
+const mostrar = 
+defineModel('mostrar', 
+  { type: Boolean, required: true })
+
 function cerrar() {
   mostrar.value = false
 }
@@ -24,6 +27,7 @@ function cerrar() {
           <router-link to="/about#preguntas-frecuentes" class="btn-rojo">
             Preguntas Frecuentes
           </router-link>
+          
           <router-link to="/#formulario-contacto" class="btn-rojo">
             <i class="bi bi-envelope me-2"></i> Formulario de Contacto
           </router-link>

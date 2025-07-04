@@ -45,7 +45,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e53935; /* Rojo personalizado */
+  background-color: #db1916; /* Rojo personalizado */
   color: white;
   border: none;
 }
