@@ -128,7 +128,7 @@ const sendEmail = () => {
             >
             Enviar mensaje
           </button>
-          <div v-if="status" class="mt-3">{{ status }}</div>
+          <div v-if="status" class="mt-3"></div>
         </form>
       </div>
     </div>
