@@ -18,11 +18,14 @@ const categorias = [
       Encuentra Recambios de Coche en Nuestro Catálogo</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
       <div class="col" v-for="(categoria, index) in categorias" :key="index">
-        <div class="categoria h-100 d-flex flex-column align-items-center justify-content-center">
-          <img :src="categoria.img" :alt="categoria.nombre" class="categoria-img" />
-          <div class="punto-naranja"></div>
-          <h6 class="mt-2">{{ categoria.nombre }}</h6>
-        </div>
+      <router-link
+        :to="`/productos/${categoria.nombre.toLowerCase().replace(/\s/g, '')}`"
+        class="categoria h-100 d-flex flex-column align-items-center justify-content-center"
+      >
+        <img :src="categoria.img" :alt="categoria.nombre" class="categoria-img" />
+        <div class="punto-rojo"></div>
+        <h6 class="mt-2">{{ categoria.nombre }}</h6>
+      </router-link>
       </div>
     </div>
   </div>
@@ -55,11 +58,17 @@ const categorias = [
 .categoria:hover .categoria-img {
   transform: scale(1.08);
 }
-.punto-naranja {
+.punto-rojo {
   width: 10px;
   height: 10px;
   background-color: rgb(221, 42, 11);
   border-radius: 50%;
   margin: 0 auto 10px;
 }
+
+.categoria, .categoria:visited, .categoria:active, .categoria:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
 </style>

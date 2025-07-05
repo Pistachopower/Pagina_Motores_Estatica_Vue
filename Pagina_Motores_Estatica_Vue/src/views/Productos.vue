@@ -6,24 +6,49 @@ const busqueda = ref('')
 
 // Unimos los tres arrays y agregamos un campo "tipo" para diferenciarlos
 const todosLosProductos = [
-  ...Motores.map(p => ({ ...p})),
+  ...Motores.map(p => ({ ...p })),
   ...CajasCambio.map(p => ({ ...p })),
-  ...Airbags.map(p => ({ ...p})),
+  ...Airbags.map(p => ({ ...p })),
 ];
 
 //console.log(todosLosProductos)
 
-//devuelve solo los que coinciden con la búsqueda
-const productosFiltrados = computed(() => {
-  const texto = busqueda.value.toLowerCase()
+import { useRoute } from 'vue-router'
+const route = useRoute()
 
-  return todosLosProductos.filter((p) =>
-  (p.motor?.toLowerCase().includes(texto) ||
-    p.cajaCambios?.toLowerCase().includes(texto) ||
-    p.airbag?.toLowerCase().includes(texto) ||
-    p.descripcion?.toLowerCase().includes(texto))
-  )
+const categoriaSeleccionada = computed(() => route.params.categoria)
+
+const productosFiltrados = computed(() => {
+  let productos = todosLosProductos
+
+  // Si hay texto de búsqueda, filtra por búsqueda en TODO el catálogo
+  if (busqueda.value.trim() !== '') {
+    const texto = busqueda.value.trim().toLowerCase()
+    productos = productos.filter(p =>
+      (p.motor && p.motor.toLowerCase().includes(texto)) ||
+      (p.cajaCambios && p.cajaCambios.toLowerCase().includes(texto)) ||
+      (p.airbag && p.airbag.toLowerCase().includes(texto)) ||
+      (p.descripcion && p.descripcion.toLowerCase().includes(texto))
+    )
+    return productos
+  }
+
+  // Si no hay búsqueda, filtra por categoría (si hay)
+  if (categoriaSeleccionada.value) {
+    if (categoriaSeleccionada.value === 'motores') {
+      productos = productos.filter(p => p.tipo === 'motor')
+    } else if (categoriaSeleccionada.value === 'transmisiones') {
+      productos = productos.filter(p => p.tipo === 'transmision')
+    } else if (categoriaSeleccionada.value === 'cajadecambios') {
+      productos = productos.filter(p => p.tipo === 'cajaCambios')
+    } else if (categoriaSeleccionada.value === 'kitdeairbag') {
+      productos = productos.filter(p => p.tipo === 'airbag')
+    }
+  }
+
+  return productos
 })
+
 </script>
 
 <template>
@@ -39,10 +64,13 @@ const productosFiltrados = computed(() => {
     <!-- Sección de tarjetas de productos -->
     <section class="productos-section mb-4">
       <h2 class="text-center mb-3">Tarjetas de productos</h2>
-      <div class="row g-3">
+      <div v-if="productosFiltrados.length === 0" class="alert alert-warning text-center">
+        No hay productos que coincidan con tu búsqueda.
+      </div>
+      <div class="row g-3" v-else>
         <!-- Usamos producto.tipo + '-' + producto.id para crear un id único y 
-         que no haya errores de visualizacion a la hora de pintar los elementos
-         -->
+      que no haya errores de visualizacion a la hora de pintar los elementos
+    -->
         <div class="col-12 col-sm-6 col-md-4" v-for="producto in productosFiltrados"
           :key="producto.tipo + '-' + producto.id">
           <div class="card h-100 shadow-sm">
@@ -53,7 +81,6 @@ const productosFiltrados = computed(() => {
                 :alt="producto.motor || producto.cajaCambios || producto.airbag"
                 style="object-fit: cover; height: 200px;" />
             </router-link>
-
 
             <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
               <h5 class="card-title">

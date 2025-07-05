@@ -30,6 +30,13 @@ const router = createRouter({
     component: DetalleProductoView,
   },
 
+  //para el componente Catalogo.vue
+  {
+  path: '/productos/:categoria?',
+  name: 'productos',
+  component: Productos,
+}
+
   ],
    scrollBehavior(to, from, savedPosition) {
     if (to.hash) {

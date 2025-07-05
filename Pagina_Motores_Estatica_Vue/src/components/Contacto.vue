@@ -21,6 +21,7 @@ const sendEmail = () => {
   )
   .then(() => {
     status.value = '¡Mensaje enviado correctamente!'
+    console.log("¡Mensaje enviado correctamente!");
     form.value.reset()
     // Mostrar el toast de éxito
     if (successToast.value) {
