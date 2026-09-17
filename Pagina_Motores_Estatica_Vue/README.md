@@ -1,35 +1,58 @@
-# Pagina_Motores_Estatica_Vue
+# Pagina Motores
 
-This template should help get you started developing with Vue 3 in Vite.
+Catálogo web de motores, cajas de cambio y kits de airbag para vehículos.
 
-## Recommended IDE Setup
+## Página web
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Visita la aplicación desplegada en GitHub Pages:
 
-## Customize configuration
+[https://pistachopower.github.io/Pagina_Motores_Estatica_Vue/](https://pistachopower.github.io/Pagina_Motores_Estatica_Vue/)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Tecnologías
 
-## Project Setup
+- Vue 3
+- Vite
+- Vue Router
+- Pinia
+- Bootstrap
+- Vitest
+
+## Instalación
+
+Desde la carpeta `Pagina_Motores_Estatica_Vue`:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Desarrollo
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+La aplicación estará disponible en la URL local que muestre Vite, normalmente `http://localhost:5173`.
+
+## Producción
+
+Generar la compilación optimizada:
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Previsualizar la compilación:
+
+```sh
+npm run preview
+```
+
+## Pruebas
 
 ```sh
 npm run test:unit
 ```
+
+## Despliegue
+
+El proyecto se despliega automáticamente en GitHub Pages mediante GitHub Actions cada vez que se actualiza la rama `main`.
